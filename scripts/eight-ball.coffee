@@ -1,6 +1,6 @@
 # The Magic Eight ball
 #
-# eightball <query> - Ask the magic eight ball a question
+# Megumi eightball <query> - Ask the magic eight ball a question
 #
 
 ball = [

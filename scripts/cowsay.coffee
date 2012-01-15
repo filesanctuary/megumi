@@ -1,6 +1,6 @@
 # Cowsay.
 #
-# cowsay <statement> - Returns a cow that says what you want.
+# Megumi cowsay <statement> - Returns a cow that says what you want.
 
 module.exports = (robot) ->
   robot.respond /cowsay( me)? (.*)/i, (msg) ->

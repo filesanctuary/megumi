@@ -1,9 +1,9 @@
 # Tracks when stuff is due.
 #
-# deadlines - List what you have due
-# add deadline 2011-10-30 Thing - Add a deadline for October 10, 2011
-# remove deadline Thing - Remove a deadline named "Thing"
-# clear deadlines - Remove all the deadlines
+# Megumi deadlines - List what you have due
+# Megumi add deadline 2011-10-30 Thing - Add a deadline for October 10, 2011
+# Megumi remove deadline Thing - Remove a deadline named "Thing"
+# Megumi clear deadlines - Remove all the deadlines
 #
 # Written by @jmhobbs
 

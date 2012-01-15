@@ -1,6 +1,6 @@
 # Allows Hubot to roll dice.
 #
-# roll dice - Roll two six-sided dice.
+# Megumi roll dice - Roll two six-sided dice.
 #
 # roll <x>d<y> - roll x dice, each of which has y sides.
 

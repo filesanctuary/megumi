@@ -1,7 +1,6 @@
 # Robot Memes
 #
-# hubot robot - mention the word robot to hubot
-#               and he responds with a robot-oriented meme
+# Megumi robot - mention the word robot to hubot and he responds with a robot-oriented meme
 
 robot_memes = [
 	"http://troll.me/images/ancient-aliens-guy/but-you-see-steve-is-a-alien-robot-thumb.jpg",

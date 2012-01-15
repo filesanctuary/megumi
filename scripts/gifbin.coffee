@@ -1,4 +1,5 @@
-# gifbin me - Return random gif from gifbin.com
+#
+# Megumi gifbin me - Return random gif from gifbin.com
 
 # Random gif from gifbin.com
 # Enrique Vidal - enrique@cloverinteractive.com

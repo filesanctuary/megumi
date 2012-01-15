@@ -1,6 +1,6 @@
 # Get a random commit message
 #
-# commit message - Displays a random commit message
+# Megumi commit message - Displays a random commit message
 
 module.exports = (robot) ->
   robot.respond /commit message/i, (msg) ->

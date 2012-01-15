@@ -1,4 +1,4 @@
-# abstract <topic> - Prints a nice abstract of the given topic.
+# Megumi (abs|abstract) <topic> - Prints a nice abstract of the given topic.
 
 # Copyright (c) 2011 John Tantalo
 # 

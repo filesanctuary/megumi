@@ -1,4 +1,5 @@
-# Display a hyperbole and a half image if anyone says "like an adult"
+#
+# like an adult - Because no-one likes being grown up
 #
 
 images = [

@@ -1,4 +1,4 @@
-# 9gag me - Returns a random meme image.
+# Megumi 9gag me - Returns a random meme image.
 
 # Random meme from 9gag
 # Rewrite by Enrique Vidal

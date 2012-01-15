@@ -1,6 +1,6 @@
 # Because animals are animals.
 #
-# animal me - Grab a random gif from http://animalsbeingdicks.com/
+# Megumi animal me - Grab a random gif from http://animalsbeingdicks.com/
 #
 Select     = require("soupselect").select
 HtmlParser = require "htmlparser"

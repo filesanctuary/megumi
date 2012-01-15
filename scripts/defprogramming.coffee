@@ -1,4 +1,5 @@
-# def programming - Display a random programming quote from defprogramming.com
+#
+# Megumi def programming - Display a random programming quote from defprogramming.com
 
 Select     = require("soupselect").select
 HtmlParser = require "htmlparser"
