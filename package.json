@@ -35,7 +35,7 @@
     "mailer": "0.6.7",
     "scribe-node": "0.0.24",
     "sandbox": "0.8.2",
-    "wolfram": "0.2.0",
+    "wolfram": "0.1.1",
     "date-utils": "1.2.5"
   },
 
