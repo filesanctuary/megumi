@@ -21,7 +21,7 @@
 HTTP = require('http')
 URL = require('url')
 QUERY = require('querystring')
-XML2JS = require ('xml2js')
+XML2JS = require('xml2js')
 
 module.exports = (robot) ->
   redmine = new Redmine process.env.HUBOT_REDMINE_BASE_URL, process.env.HUBOT_REDMINE_TOKEN
