@@ -1,6 +1,6 @@
 # Tell Hubot to send a user a message when present in the room
 #
-# tell <username> <some message>
+# Megumi tell <username> <some message> - Leave a message with Megumi until username is around around
 module.exports = (robot) ->
    localstorage = {}
    robot.respond /tell (\w*) (.*)/i, (msg) ->

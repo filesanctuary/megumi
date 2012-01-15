@@ -1,4 +1,5 @@
-#gets tweet from user
+#
+# Megumi (twitter|lasttweet) <username> - gets the last tweet from username
 module.exports = (robot) ->
   robot.respond /(twitter|lasttweet) (.+)$/i, (msg) ->
    username = msg.match[2]

@@ -1,7 +1,7 @@
 # Returns weather information from Google
 #
-# weather <city> - Get the weather for a location
-# forecast <city> - Get the forecast for a location
+# Megumi weather <city> - Get the current weather for a location
+# Megumi forecast <city> - Get the forecast for a location
 jsdom = require 'jsdom'
 env = process.env
 

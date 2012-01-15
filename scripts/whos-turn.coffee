@@ -1,6 +1,6 @@
 # Who's turn to do something ?
 #
-# who <does something> ? - Returns who does !
+# Megumi who <does something>? - Lets Megumi decide who should do something 
 #                      
 module.exports = (robot) ->
   robot.respond /(who|qui) (.+)\?/i, (msg) ->

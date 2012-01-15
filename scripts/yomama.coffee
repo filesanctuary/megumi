@@ -1,6 +1,6 @@
 # Returns a random Yo Mama joke
 #
-# yo mama joke me
+# Megumi yo mama [joke me] - Megumi tells a yo mama joke
 
 module.exports = (robot) ->
   robot.respond /(yo\s?mama( joke)?)( me)?/i, (msg) ->

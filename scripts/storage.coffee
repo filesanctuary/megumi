@@ -1,6 +1,6 @@
 # Inspect the data in redis easily
 #
-# show users - Display all users that hubot knows about
+# show users - Display all users that Megumi knows about
 # show storage - Display the contents that are persisted in redis
 #
 

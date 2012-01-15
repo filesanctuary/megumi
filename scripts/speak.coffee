@@ -1,11 +1,9 @@
 # Allows Hubot to speak many languages.
 #
-# speak me <phrase> - Detects the language 'phrase' is written in, then
-#                     sends back a spoken version of that phrase in its native
-#                     language.
+# Megumi speak me <phrase> - Detects the language 'phrase' is written in, then sends back a spoken version of that phrase in its native language.
 
 module.exports = (robot) ->
-  robot.hear /(speak)( me)? (.*)/i, (msg) ->
+  robot.respond /(speak)( me)? (.*)/i, (msg) ->
     term   = "\"#{msg.match[3]}\""
     apiKey = process.env.HUBOT_MSTRANSLATE_APIKEY
     langs = ["en"]

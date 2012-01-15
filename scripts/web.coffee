@@ -21,11 +21,11 @@ module.exports = (robot) ->
             parser.parseComplete body
             results = (Select handler.dom, "head title")
             if results[0]
-              msg.send results[0].children[0].data.replace(/(\r\n|\n|\r)/gm,"")
+              msg.send url + ": " + results[0].children[0].data.replace(/(\r\n|\n|\r)/gm,"")
             else
               results = (Select handler.dom, "title")
               if results[0]
-                msg.send results[0].children[0].data.replace(/(\r\n|\n|\r)/gm,"")
+                msg.send url + ": " + results[0].children[0].data.replace(/(\r\n|\n|\r)/gm,"")
           else
             msg.send "Error " + res.statusCode
 

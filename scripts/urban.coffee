@@ -1,6 +1,6 @@
 # Searches Urbandictionary
 #
-# urban <word> Searches Urbandictionary
+# Megumi urban <word> - Searches Urbandictionary for word
 
 module.exports = (robot) ->
   robot.respond /urban( me)? (.*)$/i, (msg) ->
