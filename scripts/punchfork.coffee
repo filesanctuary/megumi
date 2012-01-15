@@ -1,6 +1,6 @@
-# Grab a Punchform recipe - http://punchfork.com/api
+# Grab a Punchform recipe http://punchfork.com/api
 #
-# Megumi cook <ingredent>  - Suggest recipe based on ingredent
+# Megumi cook <ingredent> - Suggest recipe based on ingredent
 #
 module.exports = (robot) ->
   robot.respond /cook (.*)$/i, (msg) ->
