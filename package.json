@@ -34,7 +34,9 @@
     "nodepie": "0.4.0",
     "mailer": "0.6.7",
     "scribe-node": "0.0.24",
-    "sandbox": "0.8.2"
+    "sandbox": "0.8.2",
+    "wolfram": "0.2.0",
+    "date-utils": "1.2.5"
   },
 
   "directories":  {
