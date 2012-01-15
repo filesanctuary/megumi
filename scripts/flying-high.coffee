@@ -1,6 +1,3 @@
-#
-# (certain-phrases) - See http://www.imdb.com/title/tt0080339/
-
 module.exports = (robot) ->
 
   robot.hear /surely you/i, (msg) ->

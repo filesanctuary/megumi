@@ -1,8 +1,8 @@
 # Search stack overflow and provide links to the first 5 questions.
 #
-# sosearch me <query> - Search for the query
+# Megumi sosearch me <query> - Search StackOverflow for the query
 # or
-# sosearch me <query> with tags <tag list sperated by ,> - Search for the query limit to given tags
+# Megumi sosearch me <query> with tags <tags-seperated-by-commas> - Search StackOverflow for the query limit to given tags
 
 wwwdude = require("wwwdude")
 

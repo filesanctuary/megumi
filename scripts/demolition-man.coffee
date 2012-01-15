@@ -1,5 +1,5 @@
 # Watch your language!
-# (any-swear-word) - See http://www.youtube.com/watch?v=G1zhe85spsw
+# <any-swear-word> - See http://www.youtube.com/watch?v=G1zhe85spsw
 
 module.exports = (robot) ->
 

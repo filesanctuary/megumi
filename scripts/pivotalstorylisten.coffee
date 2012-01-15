@@ -3,7 +3,8 @@
 # You need to set the following variables:
 #   HUBOT_PIVOTAL_TOKEN = <API token>
 #
-# paste a pivotal tracker link or type "sid-####" in the presence of hubot
+# <link-to-pivotal-tracker-story> - Megumi will fetch information about that story
+
 module.exports = (robot) ->
    robot.hear /(sid-|SID-|pivotaltracker.com\/story\/show)/i, (msg) ->
     Parser = require("xml2js").Parser

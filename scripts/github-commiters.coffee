@@ -5,8 +5,6 @@
 # the HUBOT_BOT_GITHUB_USER should map to the bot github username
 # the HUBOT_BOT_GITHUB_PASS should map to the bot github password
 
-# developed by http://github.com/fellix - Crafters Software Studio
-
 module.exports = (robot) ->
   robot.hear /^repo commiters (.*)$/i, (msg) ->
       read_contributors msg, (commits) ->
