@@ -41,7 +41,7 @@ module.exports = (robot) ->
           response = JSON.parse body
           responseTitle = response.data.info[0].title.replace(/(\r\n|\n|\r)/gm,"")
           if responseTitle
-            if response.status_code is 200 then
+            if response.status_code is 200
               message_to_send = url + ": " responseTitle
             else
               message_to_send = url + ": " response.status_txt
