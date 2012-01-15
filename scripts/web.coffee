@@ -42,9 +42,9 @@ module.exports = (robot) ->
           responseTitle = response.data.info[0].title.replace(/(\r\n|\n|\r)/gm,"")
           if responseTitle
             if response.status_code is 200
-              message_to_send = url + ": " responseTitle
+              message_to_send = url + ": " + responseTitle
             else
-              message_to_send = url + ": " response.status_txt
+              message_to_send = url + ": " + response.status_txt
             msg.send message_to_send
           else
             httpResponse(url)
