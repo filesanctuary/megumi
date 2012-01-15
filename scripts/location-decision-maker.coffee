@@ -2,11 +2,11 @@
 #
 # These commands are grabbed from comment blocks at the top of each file.
 #
-# remember <location> as a <group> location - Remembers the location for the group.
-# forget <location> as a <group> location - Forgets the location from the group.
-# forget all locations for <group> - Forgets all the locations for the group.
-# where can we go for <group>? - Returns a list of places that exist for the group.
-# where should we go for <group>? - Returns a randomly selected location for the group.
+# Megumi remember <location> as a <group> location - Remembers the location for the group.
+# Megumi forget <location> as a <group> location - Forgets the location from the group.
+# Megumi forget all locations for <group> - Forgets all the locations for the group.
+# Megumi where can we go for <group>? - Returns a list of places that exist for the group.
+# Megumi where should we go for <group>? - Returns a randomly selected location for the group.
 
 class Locations
   constructor: (@robot) ->

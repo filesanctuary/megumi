@@ -1,11 +1,11 @@
 # A way to interact with the Google Images API.
 #
-# image me <query>    - The Original. Queries Google Images for <query> and
+# Megumi image me <query>    - The Original. Queries Google Images for <query> and
 #                       returns a random top result.
-# animate me <query>  - The same thing as `image me`, except adds a few
+# Megumi animate me <query>  - The same thing as `image me`, except adds a few
 #                       parameters to try to return an animated GIF instead.
-# mustache me <url>   - Adds a mustache to the specified URL.
-# mustache me <query> - Searches Google Images for the specified query and
+# Megumi mustache me <url>   - Adds a mustache to the specified URL.
+# Megumi mustache me <query> - Searches Google Images for the specified query and
 #                       mustaches it.
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->

@@ -1,10 +1,7 @@
 # Grabs movie scores from Rotten Tomatoes
 # 
-# rotten me <movie>
-# 
-# Examples:
-# rotten me inception
-# rotten me the good, the bad, and the ugly
+# Megumi rotten me <movie> - Grabs movie scores from Rotten Tomatoes
+
 module.exports = (robot) ->
   robot.respond /rotten me (.*)$/i, (msg) ->
     api_key = process.env.HUBOT_ROTTEN_TOMATOES_API_KEY

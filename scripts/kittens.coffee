@@ -1,9 +1,8 @@
-
 # Kittens!
 #
-# kitten me - A randomly selected kitten
-# kitten me <w>x<h> - A kitten of the given size
-# kitten bomb me <number> - Many many kittens!
+# Megumi kitten me - A randomly selected kitten
+# Megumi kitten me <w>x<h> - A kitten of the given size
+# Megumi kitten bomb me <number> - Many many kittens!
 
 module.exports = (robot) ->
   robot.respond /kittens?(?: me)?$/i, (msg) ->

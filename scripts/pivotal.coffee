@@ -8,7 +8,7 @@
 #
 # Otherwise, include the project name in your message to Hubot.
 #
-# show me stories for <project> -- shows current stories being worked on
+# Megumi show me stories for <project> -- shows current stories being worked on
 module.exports = (robot) ->
   robot.respond /show\s+(me\s+)?stories\s+(for\s+)?(.*)/i, (msg)->
     Parser = require("xml2js").Parser

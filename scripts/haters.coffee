@@ -1,7 +1,7 @@
 # Display a random "haters gonna hate" image
 #
-# haters - Returns a random haters gonna hate url
-#
+# Megumi haters - Returns a random haters gonna hate url
+# haters gonna hate - Returns a random haters gonna hate url
 #
 haters = [
   "http://www.hatersgoingtohate.com/wp-content/uploads/2010/06/haters-gonna-hate-rubberband-ball.jpg"

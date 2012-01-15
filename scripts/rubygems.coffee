@@ -4,7 +4,7 @@
 #
 
 module.exports = (robot) ->
-  robot.respond /there's a gem for (.*)/i, (msg) ->
+  robot.hear /there's a gem for (.*)/i, (msg) ->
     search = msg.match[1]
     msg.http('https://rubygems.org/api/v1/search.json')
       .query(query: search)

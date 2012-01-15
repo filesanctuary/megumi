@@ -1,7 +1,7 @@
 # Who doesnt love Penny Arcade?
 #
-# pa - The latest Penny Arcade comic
-# pa <date> - Penny Arcade comic from <date> - mm/dd/yyyy format
+# Megumi pa - The latest Penny Arcade comic
+# Megumi pa <date> - Penny Arcade comic from <date> - mm/dd/yyyy format
 
 htmlparser = require "htmlparser"
 Select     = require("soupselect").select

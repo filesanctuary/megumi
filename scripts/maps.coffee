@@ -1,6 +1,6 @@
 # Interacts with the Google Maps API.
 #
-# map me <query> - Returns a map view of the area returned by `query`.
+# Megumi map me <query> - Returns a map view of the area returned by `query`.
 
 module.exports = (robot) ->
 

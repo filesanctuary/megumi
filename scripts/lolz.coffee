@@ -1,3 +1,4 @@
+#
 # lulz - BRING THE LOLZ from bukk.it
 
 Select     = require("soupselect").select

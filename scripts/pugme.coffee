@@ -1,7 +1,7 @@
 # Pugme is the most important thing in your life
 #
-# pug me - Receive a pug
-# pug bomb N - get N pugs
+# Megumi pug me - Receive a pug
+# Megumi pug bomb N - get N pugs
 
 module.exports = (robot) ->
 

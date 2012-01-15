@@ -1,6 +1,4 @@
-# Polite.
-#
-# Say thanks to your robot.
+# Polite. Say thanks to your robot.
 
 responses = [
   "You're welcome.",

@@ -1,6 +1,6 @@
 # Uses downforeveryoneorjustme.com to check if a site is up.
 #
-# is <domain> up?   - Checks if <domain> is up
+# Megumi is <domain> (up|down)   - Checks if <domain> is up
 #
 # Written by @jmhobbs
 
