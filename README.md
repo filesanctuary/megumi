@@ -1,9 +1,16 @@
-Hubot
-=====
+Megumi
+======
 
-This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
+This is Rocket Dog Creative's Campfire bot, Megumi. She's based
+on Hubot, GitHub's Campfire bot, but we've customised her to our
+needs, and cleaned up a whole bunch of the documentation.
+
+For the most part, it's basically Hubot, though, so if you know
+how to use Hubot, you know how to use Megumi, too.
 
 This version is designed to be deployed on heroku.
+
+The rest of these docs are from Hubot's README.
 
 Playing with Hubot
 ==================
