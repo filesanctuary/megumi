@@ -30,7 +30,7 @@ module.exports = (robot) ->
     memeGenerator msg, 121, 1031, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
-  robot.hear /(.*) (ALL the .*)/i, (msg) ->
+  robot.hear /(.*) (ALL the .*!)/i, (msg) ->
     memeGenerator msg, 6013, 1121885, msg.match[1], msg.match[2], (url) ->
       msg.send url
 
@@ -84,7 +84,7 @@ memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
           if preferredDimensions?
             callback "http://images.memegenerator.net/instances/#{preferredDimensions}/#{instanceID}.jpg"
           else
-            callback "http://memegenerator.net#{img}"
+            callback "http://images.memegenerator.net/instances/#{preferredDimensions}/#{instanceID}.jpg"
       else
         msg.reply "Sorry, I couldn't generate that image."
 
