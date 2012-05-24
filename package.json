@@ -42,5 +42,8 @@
   "directories":  {
     "lib": "./src"
   },
-  "engine": "node >= 0.4.1"
+  "engines": {
+    "node": "0.6.x",
+    "npm":  "1.0.x"  
+  }
 }
