@@ -9,7 +9,7 @@
 # Megumi play - Plays music.
 # Megumi play next - Plays the next song.
 # Megumi play previous - Plays the previous song.
-# Megumi what's playing - Returns the currently-played song.
+# Megumi what's playing? - Returns the currently-played song.
 # Megumi I want this song - Returns a download link for the current song.
 # Megumi I want this album - Returns a download link for the current album.
 # Megumi play <artist> - Queue up ten songs from a given artist.
@@ -38,7 +38,7 @@ module.exports = (robot) ->
     authedRequest message, '/stream_url', 'get', {}, (err, res, body) ->
       message.send("play's at #{URL} and you can stream from #{body}")
 
-  robot.respond /what'?s playing/i, (message) ->
+  robot.respond /what'?s playing\?/i, (message) ->
     authedRequest message, '/now_playing', 'get', {}, (err, res, body) ->
       json = JSON.parse(body)
       str = "\"#{json.name}\" by #{json.artist}, from \"#{json.album}\"."
