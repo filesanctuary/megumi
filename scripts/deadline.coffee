@@ -1,11 +1,20 @@
-# Tracks when stuff is due.
+# Description:
+#   Tracks when stuff is due
 #
-# Megumi deadlines - List what you have due
-# Megumi add deadline 2011-10-30 Thing - Add a deadline for October 10, 2011
-# Megumi remove deadline Thing - Remove a deadline named "Thing"
-# Megumi clear deadlines - Remove all the deadlines
+# Dependencies:
+#   None
 #
-# Written by @jmhobbs
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi deadlines - List what you have due
+#   megumi add deadline 2011-10-30 Thing - Add a deadline for October 10, 2011
+#   megumi remove deadline Thing - Remove a deadline named "Thing"
+#   megumi clear deadlines - Remove all the deadlines
+#
+# Author:
+#   jmhobbs
 
 module.exports = (robot) ->
 
@@ -61,5 +70,3 @@ module.exports = (robot) ->
       
     else
       msg.send "I'm not currently tracking any deadlines. Why don't you add one?"
-
-

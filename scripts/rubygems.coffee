@@ -1,10 +1,20 @@
-# Find a rubygem from rubygems.org
+# Description:
+#   Find a rubygem from rubygems.org
 #
-# there's a gem for <gemname> - Returns a link to a gem on rubygems.org
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi there's a gem for <that> - Returns a link to a gem on rubygems.org
+#
+# Author:
+#   sferik
 
 module.exports = (robot) ->
-  robot.hear /there's a gem for (.*)/i, (msg) ->
+  robot.respond /there's a gem for (.*)/i, (msg) ->
     search = msg.match[1]
     msg.http('https://rubygems.org/api/v1/search.json')
       .query(query: search)

@@ -1,7 +1,18 @@
-# Last (or current) played song by a user in Last.fm
 #
-# Megumi <what's playing> someone - Returns song name and artist
+# Description:
+#   Last (or current) played song by a user in Last.fm
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   HUBOT_LASTFM_APIKEY
+#
+# Commands:
+#   megumi what's playing <last FM user> - Returns song name and artist
+#
+# Author:
+#   guilleiguaran 
 
 module.exports = (robot) ->
   robot.respond /what's playing (.*)/i, (msg) ->

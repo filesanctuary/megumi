@@ -1,5 +1,18 @@
+# Description:
+#   None
 #
-# lulz - BRING THE LOLZ from bukk.it
+# Dependencies:
+#   "htmlparser": "1.7.6"
+#   "soupselect: "0.2.0"
+# 
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi lulz - BRING THE LOLZ from bukk.it
+#
+# Author:
+#   dstrelau
 
 Select     = require("soupselect").select
 HtmlParser = require "htmlparser"

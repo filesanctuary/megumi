@@ -1,7 +1,19 @@
-# Shows a short history lesson of the day from the Computer History Museum.
+# Description:
+#   Shows a short history lesson of the day from the Computer History Museum
 #
-# Megumi (chm|tdih|today in computer history) - Displays the content from the This Day in History page on the Computer History Museum site.
+# Dependencies:
+#   "htmlparser": "1.7.6"
+#   "soupselect: "0.2.0"
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi today in computer history|tdih|chm - Displays the content from the This Day in History page on the Computer History Museum site
+#
+# Author:
+#   facto
+
 Select     = require("soupselect").select
 HtmlParser = require "htmlparser"
 

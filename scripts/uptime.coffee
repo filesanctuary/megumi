@@ -1,4 +1,17 @@
-# Outputs bot uptime
+# Description:
+#   None
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi uptime - Outputs bot uptime
+#
+# Author:
+#   whitman
 
 module.exports = (robot) ->
 

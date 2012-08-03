@@ -1,27 +1,33 @@
-# Play music. At your office. Like a boss.
+# Description:
+#   Play music. At your office. Like a boss. https://github.com/play/play
 #
-# play.coffee uses play, an open source API to playing music:
-#   https://github.com/play/play
+# Dependencies:
+#   None
 #
-# Make sure you set up your HUBOT_PLAY_URL environment variable with the URL to
-# your company's play.
+# Configuration:
+#   HUBOT_PLAY_URL
+#   HUBOT_PLAY_TOKEN
 #
-# Megumi play - Plays music.
-# Megumi play next - Plays the next song.
-# Megumi play previous - Plays the previous song.
-# Megumi what's playing? - Returns the currently-played song.
-# Megumi I want this song - Returns a download link for the current song.
-# Megumi I want this album - Returns a download link for the current album.
-# Megumi play <artist> - Queue up ten songs from a given artist.
-# Megumi play <album> - Queue up an entire album.
-# Megumi play <song> - Queue up a particular song. This grabs the first song by playcount.
-# Megumi play <something> right [fucking] now - Play this shit right now.
-# Megumi where's play - Gives you the URL to the web app.
-# Megumi volume? - Returns the current volume level.
-# Megumi volume [0-100] - Sets the volume.
-# Megumi be quiet - Mute play.
-# Megumi say <message> - `say` your message over your speakers.
-# Megumi clear play - Clears the Play queue.
+# Commands:
+#   megumi play - Plays music.
+#   megumi play next - Plays the next song.
+#   megumi play previous - Plays the previous song.
+#   megumi what's playing - Returns the currently-played song.
+#   megumi I want this song - Returns a download link for the current song.
+#   megumi I want this album - Returns a download link for the current album.
+#   megumi play <artist> - Queue up ten songs from a given artist.
+#   megumi play <album> - Queue up an entire album.
+#   megumi play <song> - Queue up a particular song. This grabs the first song by playcount.
+#   megumi play <something> right [fucking] now - Play this shit right now.
+#   megumi where's play - Gives you the URL to the web app.
+#   megumi volume? - Returns the current volume level.
+#   megumi volume [0-100] - Sets the volume.
+#   megumi be quiet - Mute play.
+#   megumi say <message> - `say` your message over your speakers.
+#   megumi clear play - Clears the Play queue.
+#
+# Author:
+#   holman
 
 URL = "#{process.env.HUBOT_PLAY_URL}"
 
@@ -38,7 +44,7 @@ module.exports = (robot) ->
     authedRequest message, '/stream_url', 'get', {}, (err, res, body) ->
       message.send("play's at #{URL} and you can stream from #{body}")
 
-  robot.respond /what'?s playing\?/i, (message) ->
+  robot.respond /what'?s playing/i, (message) ->
     authedRequest message, '/now_playing', 'get', {}, (err, res, body) ->
       json = JSON.parse(body)
       str = "\"#{json.name}\" by #{json.artist}, from \"#{json.album}\"."

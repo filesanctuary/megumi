@@ -1,6 +1,17 @@
-# Grabs movie scores from Rotten Tomatoes
-# 
-# Megumi rotten me <movie> - Grabs movie scores from Rotten Tomatoes
+# Description:
+#   Grabs movie scores from Rotten Tomatoes
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   HUBOT_ROTTEN_TOMATOES_API_KEY
+#
+# Commands:
+#   megumi rotten me <movie>
+#
+# Author:
+#   mportiz08
 
 module.exports = (robot) ->
   robot.respond /rotten me (.*)$/i, (msg) ->

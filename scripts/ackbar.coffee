@@ -1,7 +1,17 @@
-# It's a trap
+# Description:
+#   None
 #
-# trap - Display an Admiral Ackbar piece of wonder
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   trap - Display an Admiral Ackbar piece of wonder
+#
+# Author:
+#   brilliantfantastic
 
 ackbars = [
   "http://dayofthejedi.com/wp-content/uploads/2011/03/171.jpg",
@@ -18,5 +28,5 @@ ackbars = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(trap).*/i, (msg) ->
+  robot.hear /it'?s a trap\b/i, (msg) ->
     msg.send msg.random ackbars

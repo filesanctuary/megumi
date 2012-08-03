@@ -1,7 +1,18 @@
-# Show random octocat
+# Description:
+#   Show random octocat
 #
-# Megumi octocat me - a randomly selected octocat
-# Megumi octocat bomb me <number> - octocat-splosion!
+# Dependencies:
+#   "xml2js": "0.1.14"
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi octocat me - a randomly selected octocat
+#   megumi octocat bomb me <number> - octocat-splosion!
+#
+# Author:
+#   joshuaflanagan
 
 xml2js = require('xml2js')
 

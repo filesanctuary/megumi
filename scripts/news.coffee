@@ -1,7 +1,18 @@
-# Returns the latest news headlines from Google
+# Description:
+#   Returns the latest news headlines from Google
 #
-# Megumi news - Get the latest headlines
-# Megumi news <topic> - Get the latest headlines for a specific topic
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi news - Get the latest headlines
+#   megumi news <topic> - Get the latest headlines for a specific topic
+#
+# Author:
+#   Matt McCormick
 
 module.exports = (robot) ->
   robot.respond /news(?: me| on)?\s?(.*)/, (msg) ->
@@ -40,4 +51,3 @@ module.exports = (robot) ->
     catch err
       err = "Sorry, but I could not fetch the latest headlines."
     cb(response, err)
-

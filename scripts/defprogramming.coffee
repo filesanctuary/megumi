@@ -1,5 +1,18 @@
+# Description:
+#   None
 #
-# Megumi def programming - Display a random programming quote from defprogramming.com
+# Dependencies:
+#   "htmlparser": "1.7.6"
+#   "soupselect: "0.2.0"
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi def programming - Display a random programming quote from defprogramming.com
+#
+# Author:
+#   daviferreira
 
 Select     = require("soupselect").select
 HtmlParser = require "htmlparser"

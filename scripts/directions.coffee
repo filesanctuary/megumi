@@ -1,6 +1,17 @@
-# Get directions between two locations
+# Description:
+#   Get directions between two locations
 #
-# Megumi get directions "<origin>" "<destination>" -- Shows directions between these locations.
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi get directions "<origin>" "<destination>" -- Shows directions between these locations
+#
+# Author:
+#   sleekslush
 
 parse_directions = (body) ->
   directions = JSON.parse body

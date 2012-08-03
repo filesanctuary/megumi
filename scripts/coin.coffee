@@ -1,7 +1,17 @@
-# Help decide between two things
+# Description:
+#   Help decide between two things
 #
-# Megumi throw a coin - Gives you heads or tails
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi throw a coin - Gives you heads or tails
+#
+# Author:
+#   mrtazz
 
 thecoin = ["heads", "tails"]
 

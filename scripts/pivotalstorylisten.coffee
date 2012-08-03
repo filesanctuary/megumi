@@ -1,9 +1,17 @@
-# Listen for a specific story from PivotalTracker
+# Description:
+#   Listen for a specific story from PivotalTracker
 #
-# You need to set the following variables:
-#   HUBOT_PIVOTAL_TOKEN = <API token>
+# Dependencies:
+#   None
 #
-# <link-to-pivotal-tracker-story> - Megumi will fetch information about that story
+# Configuration:
+#   HUBOT_PIVOTAL_TOKEN
+#
+# Commands:
+#   paste a pivotal tracker link or type "sid-####" in the presence of hubot
+#
+# Authors:
+#   christianchristensen
 
 module.exports = (robot) ->
    robot.hear /(sid-|SID-|pivotaltracker.com\/story\/show)/i, (msg) ->
@@ -32,4 +40,3 @@ module.exports = (robot) ->
                 storyReturned = true
                 return
     return
-

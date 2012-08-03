@@ -1,7 +1,18 @@
-# Grab a Punchform recipe http://punchfork.com/api
+# Description:
+#   Grab a Punchform recipe - http://punchfork.com/api
 #
-# Megumi cook <ingredent> - Suggest recipe based on ingredent
+# Dependencies:
+#   None
 #
+# Configuration:
+#   HUBOT_PUNCHFORK_APIKEY
+#
+# Commands:
+#   megumi cook <ingredent>  - Suggest recipe based on ingredent
+#
+# Author:
+#   adamstrawson
+
 module.exports = (robot) ->
   robot.respond /cook (.*)$/i, (msg) ->
  

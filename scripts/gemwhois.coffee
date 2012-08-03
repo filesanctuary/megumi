@@ -1,7 +1,17 @@
-# Whois for gems, because gem names are like domains in the 90's
+# Description:
+#   Whois for gems, because gem names are like domains in the 90's
 #
-# Megumi gem whois <gemname> - returns gem details if it exists
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi gem whois <gemname> - returns gem details if it exists
+#
+# Author:
+#   jonmagic
 
 module.exports = (robot) ->
   robot.respond /gem whois (.*)/i, (msg) ->
@@ -10,10 +20,13 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         try
           json = JSON.parse(body)
-          msg.send "   gem name: #{json.name}\n
-     owners: #{json.authors}\n
-       info: #{json.info}\n
-    version: #{json.version}\n
-  downloads: #{json.downloads}\n"
+          msg.send "     gem name: #{json.name}\n
+       owners: #{json.authors}\n
+         info: #{json.info}\n
+      version: #{json.version}\n
+    downloads: #{json.downloads}\n
+     homepage: #{json.homepage_uri}\n
+documentation: #{json.documentation_uri}\n
+  source code: #{json.source_code_uri}\n"
         catch err
           msg.send "Gem not found. It will be mine. Oh yes. It will be mine. *sinister laugh*"

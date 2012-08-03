@@ -1,4 +1,16 @@
-# Hubot has feelings too, you know
+# Description:
+#   Megumi has feelings too, you know
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#
+# Author:
+#   iangreenleaf
 
 messages = [
   "Hey, that stings."
@@ -7,6 +19,7 @@ messages = [
   "You should try to be nicer."
   "Sticks and stones cannot pierce my anodized exterior, but words *do* hurt me."
   "I'm sorry, I'll try to do better next time."
+  "https://p.twimg.com/AoTI6tLCIAAITfB.jpg"
 ]
 
 hurt_feelings = (msg) ->

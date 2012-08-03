@@ -1,6 +1,17 @@
-# Get a fortune
+# Description:
+#   Get a fortune
 #
-# Megumi fortune me - Displays a super true fortune
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi fortune me - Displays a super true fortune
+#
+# Author:
+#   mrtazz
 
 module.exports = (robot) ->
   robot.respond /(fortune)( me)?/i, (msg) ->

@@ -1,10 +1,21 @@
-# Github Credentials allows you to map your user against your GitHub user.
-# This is specifically in order to work with apps that have GitHub Oauth users.
+# Description:
+#   Github Credentials allows you to map your user against your GitHub user.
+#   This is specifically in order to work with apps that have GitHub Oauth users.
 #
-# Megumi who do you know - List all the users with github logins tracked by Hubot
-# Megumi i am githubusernamehere - map your user to the github login `githubusernamehere`
-# Megumi who am i - reveal your mapped github login
-# Megumi forget me - de-map your user to your github login
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi who do you know - List all the users with github logins tracked by Hubot
+#   megumi i am `maddox` - map your user to the github login `maddox`
+#   megumi who am i - reveal your mapped github login
+#   megumi forget me - de-map your user to your github login
+#
+# Author:
+#   maddox
 
 module.exports = (robot) ->
 
@@ -17,7 +28,7 @@ module.exports = (robot) ->
 
     msg.send theReply
 
-  robot.respond /i am (\w+)/i, (msg) ->
+  robot.respond /i am ([a-z0-9-]+)/i, (msg) ->
     githubLogin = msg.match[1]
     msg.message.user.githubLogin = githubLogin
     msg.send "Ok, you are " + githubLogin + " on GitHub"
@@ -34,4 +45,3 @@ module.exports = (robot) ->
     user.githubLogin = null
 
     msg.reply("Ok, I have no idea who you are anymore.")
-

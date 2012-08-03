@@ -1,9 +1,21 @@
-# Shorten URLs with bit.ly
+# Description:
+#   Shorten URLs with bit.ly
 #
-# Megumi (bitly|shorten) me <url> - Shorten the URL using bit.ly
+# Dependencies:
+#   None
+#
+# Configuration:
+#   HUBOT_BITLY_USERNAME
+#   HUBOT_BITLY_API_KEY
+#
+# Commands:
+#   megumi (bitly|shorten) (me) <url> - Shorten the URL using bit.ly
+#
+# Author:
+#   sleekslush
 
 module.exports = (robot) ->
-  robot.respond /(bitly|shorten) (me)? (.+)$/, (msg) ->
+  robot.respond /(bitly|shorten)\s?(me)?\s?(.+)$/i, (msg) ->
     msg
       .http("http://api.bitly.com/v3/shorten")
       .query

@@ -1,6 +1,17 @@
-# Returns a random Yo Mama joke
+# Description:
+#   None
 #
-# Megumi yo mama [joke me] - Megumi tells a yo mama joke
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi yo mama joke me - Returns a random Yo Mama joke
+#
+# Author:
+#   victorbutler
 
 module.exports = (robot) ->
   robot.respond /(yo\s?mama( joke)?)( me)?/i, (msg) ->

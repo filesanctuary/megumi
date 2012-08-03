@@ -1,6 +1,17 @@
-# Cowsay.
+# Description:
+#   Cowsay.
 #
-# Megumi cowsay <statement> - Returns a cow that says what you want.
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi cowsay <statement> - Returns a cow that says what you want
+#
+# Author:
+#   brettbuddin
 
 module.exports = (robot) ->
   robot.respond /cowsay( me)? (.*)/i, (msg) ->

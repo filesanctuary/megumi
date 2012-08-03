@@ -1,8 +1,19 @@
-# Kittens!
+# Description:
+#   Kittens!
 #
-# Megumi kitten me - A randomly selected kitten
-# Megumi kitten me <w>x<h> - A kitten of the given size
-# Megumi kitten bomb me <number> - Many many kittens!
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+# 
+# Commands:
+#   megumi kitten me - A randomly selected kitten
+#   megumi kitten me <w>x<h> - A kitten of the given size
+#   megumi kitten bomb me <number> - Many many kittens!
+#
+# Author:
+#   dstrelau
 
 module.exports = (robot) ->
   robot.respond /kittens?(?: me)?$/i, (msg) ->

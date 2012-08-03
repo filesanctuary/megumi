@@ -1,7 +1,18 @@
-# Megumi 9gag me - Returns a random meme image.
-
-# Random meme from 9gag
-# Rewrite by Enrique Vidal
+# Description:
+#   None
+#
+# Dependencies:
+#   "htmlparser": "1.7.6"
+#   "soupselect: "0.2.0"
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   megumi 9gag me - Returns a random meme image
+#
+# Author:
+#   EnriqueVidal 
 
 Select      = require( "soupselect" ).select
 HTMLParser  = require "htmlparser"
@@ -23,7 +34,12 @@ send_meme = (message, location, response_handler)->
       location = response.headers['location']
       return send_meme( message, location, response_handler )
 
-    response_handler get_meme_image( body, ".img-wrap img" )
+    img_src = get_meme_image( body, ".img-wrap img" )
+
+    if img_src.substr 0,4 != "http"
+      img_src = "http:#{img_src}"
+
+    response_handler img_src
 
 get_meme_image = (body, selector)->
   html_handler  = new HTMLParser.DefaultHandler((()->), ignoreWhitespace: true )
