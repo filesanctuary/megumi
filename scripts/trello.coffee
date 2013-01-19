@@ -8,15 +8,15 @@
 #   HUBOT_TRELLO_KEY - your trello developer key
 #
 # Commands:
-#   hubot trello all the users - which users do we know about trello for
-#   hubot trello get token - provides instructions on acquiring a token
-#   hubot trello set token <token> - set the authentication token
-#   hubot trello forget me - deletes the authentication token
-#   hubot trello boards - list your trello boards
-#   hubot trello set my board to <board> - set your default board
-#   hubot trello lists - list your trello lists on the default board
-#   hubot trello set my list to <list> - set your default list
-#   hubot trello me <message> - add a new card to your default list
+#   megumi trello all the users - which users do we know about trello for
+#   megumi trello get token - provides instructions on acquiring a token
+#   megumi trello set token <token> - set the authentication token
+#   megumi trello forget me - deletes the authentication token
+#   megumi trello boards - list your trello boards
+#   megumi trello set my board to <board> - set your default board
+#   megumi trello lists - list your trello lists on the default board
+#   megumi trello set my list to <list> - set your default list
+#   megumi trello me <message> - add a new card to your default list
 #
 # Notes:
 #   Currently cards can only be added to your default list/board although
