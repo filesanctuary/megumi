@@ -47,7 +47,7 @@ module.exports = (robot) ->
     msg.send "Get a token from https://trello.com/1/connect?key=#{trello_key}&name=cicsbot&response_type=token&scope=read,write&expiration=never"
     msg.send "Then send it back to me as \"trello add token <token>\""
 
-  robot.respond /trello add token ([a-f0-9]+)/i, (msg) ->
+  robot.respond /trello set token ([a-f0-9]+)/i, (msg) ->
 
     trellotoken = msg.match[1]
     msg.message.user.trellotoken = trellotoken
