@@ -17,9 +17,9 @@
   "dependencies": {
     "hubot": ">= 2.0.4",
     "optparse": "1.0.3",
-    "redis": "0.6.7",
+    "redis": "0.7.2",
     "jsdom": "==0.2.0",
-    "xml2js": "0.1.x",
+    "xml2js": "0.1.14",
     "soupselect": "0.2.0",
     "htmlparser": "1.7.x",
     "sprintf": "0.1.1",
