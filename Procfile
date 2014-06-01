@@ -1,1 +1,1 @@
-app: bin/hubot -a campfire -n Megumi
+web: bin/hubot -a campfire -n Hubot

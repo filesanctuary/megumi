@@ -1,102 +1,127 @@
-Megumi
-======
+# Megumi
 
-This is Rocket Dog Creative's Campfire bot, Megumi. She's based
-on Hubot, GitHub's Campfire bot, but we've customised her to our
-needs, and cleaned up a whole bunch of the documentation.
+This is Rocket Dog Creative's Campfire bot, Megumi. She's based on Hubot, GitHub's Campfire bot.
 
-For the most part, it's basically Hubot, though, so if you know
-how to use Hubot, you know how to use Megumi, too.
+### Testing Hubot Locally
 
-This version is designed to be deployed on heroku.
-
-The rest of these docs are from Hubot's README.
-
-Playing with Hubot
-==================
-
-You'll need to install the necessary dependencies for hubot. All of
-those dependencies are provided by [npm](http://npmjs.org) except for       
-Redis server.    
-Ubuntu: ```sudo apt-get install redis-server```     
-Then:
+You can test your hubot by running the following.
 
     % bin/hubot
 
-You'll see some startup output about where your scripts come from.
+You'll see some start up output about where your scripts come from and a
+prompt.
 
-    Loading deploy-local scripts at /Users/me/nubot/scripts
-    Loading hubot core scripts for relative scripts at /Users/me/nubot/src/hubot/scripts
-    Hubot: the Shell.
-    { id: '1', name: 'Shell' }
-    Loading hubot-scripts from /Users/me/nubot/hubot-scripts.json
-    Successfully connected to Redis
+    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading adapter shell
+    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/scripts
+    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/src/scripts
+    Hubot>
 
-Then you can interact with Hubot by typing `hubot help`.
+Then you can interact with hubot by typing `hubot help`.
 
-    hubot help
+    Hubot> hubot help
 
-    animate me <query> - The same thing as `image me`, except adds a few
+    Hubot> animate me <query> - The same thing as `image me`, except adds a few
     convert me <expression> to <units> - Convert expression to given units.
     help - Displays all of the help commands that Hubot knows about.
     ...
 
+
+### Scripting
+
 Take a look at the scripts in the `./scripts` folder for examples.
-Delete any scripts you think are silly.  Add whatever functionality you
-want hubot to have.
+Delete any scripts you think are useless or boring.  Add whatever functionality you
+want hubot to have. Read up on what you can do with hubot in the [Scripting Guide](https://github.com/github/hubot/blob/master/docs/scripting.md).
 
-Adapters
-========
+### Redis Persistence
 
-Adapters are now external to the core of hubot, apart from Campfire and Shell.
-If you would like to use an external adapter you can edit the `package.json` to
-include the adapter package in the `dependencies` then update the `Procfile` to
-load the adapter `app: bin/hubot -a <adapter> -n hubot` where `<adapter>` is
-the name of the adapter with the `hubot-` prefix.
+If you are going to use the `redis-brain.coffee` script from `hubot-scripts`
+(strongly suggested), you will need to install Redis and manually
+set the `REDIS_URL` variable.
 
-hubot-scripts
-=============
+    % export REDIS_URL="redis://localhost:6379"
+
+If you don't require any persistence feel free to remove the
+`redis-brain.coffee` from `hubot-scripts.json` and you don't need to worry
+about redis at all.
+
+## Adapters
+
+Adapters are the interface to the service you want your hubot to run on. This
+can be something like Campfire or IRC. There are a number of third party
+adapters that the community have contributed. Check
+[Hubot Adapters][hubot-adapters] for the available ones.
+
+If you would like to run a non-Campfire or shell adapter you will need to add
+the adapter package as a dependency to the `package.json` file in the
+`dependencies` section.
+
+Once you've added the dependency and run `npm install` to install it you can
+then run hubot with the adapter.
+
+    % bin/hubot -a <adapter>
+
+Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
+
+[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
+
+## hubot-scripts
 
 There will inevitably be functionality that everyone will want. Instead
 of adding it to hubot itself, you can submit pull requests to
-[hubot-scripts](https://github.com/github/hubot-scripts). To enable
-scripts from the hubot-scripts package, add the script name with extension as a
-double quoted string to the hubot-scripts.json file in this repo.
+[hubot-scripts][hubot-scripts].
 
-Deployment
-==========
+To enable scripts from the hubot-scripts package, add the script name with
+extension as a double quoted string to the `hubot-scripts.json` file in this
+repo.
 
-    % heroku create --stack cedar
-    % git push heroku master
-    % heroku ps:scale app=1
-    % heroku addons:add redistogo:nano
+[hubot-scripts]: https://github.com/github/hubot-scripts
 
-If you run into any problems, checkout heroku's [docs](http://devcenter.heroku.com/articles/node-js).
+## external-scripts
 
-You'll need to edit the `Procfile` to say what the bot's name is.
+Tired of waiting for your script to be merged into `hubot-scripts`? Want to
+maintain the repository and package yourself? Then this added functionality
+maybe for you!
 
-Hubot also needs three environmental variables set to run and to keep him
-running on heroku.
+Hubot is now able to load scripts from third-party `npm` packages! To enable
+this functionality you can follow the following steps.
 
-Campfire Variables
-------------------
+1. Add the packages as dependencies into your `package.json`
+2. `npm install` to make sure those packages are installed
 
-Create a separate user for your bot and get their token from the web UI.
+To enable third-party scripts that you've added you will need to add the package
+name as a double quoted string to the `external-scripts.json` file in this repo.
 
-    % heroku config:add HUBOT_CAMPFIRE_TOKEN="..."
+### Deploying to UNIX or Windows
 
-Get the numeric ids of the rooms you want the bot to join, comma
-delimited. If you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42` 
+If you would like to deploy to either a UNIX operating system or Windows.
+Please check out the [deploying hubot onto UNIX][deploy-unix] and
+[deploying hubot onto Windows][deploy-windows] wiki pages.
+
+[heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
+[deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
+[deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+
+## Campfire Variables
+
+If you are using the Campfire adapter you will need to set some environment
+variables. Refer to the documentation for other adapters and the configuraiton
+of those, links to the adapters can be found on [Hubot Adapters][hubot-adapters].
+
+Create a separate Campfire user for your bot and get their token from the web
+UI.
+
+    % export HUBOT_CAMPFIRE_TOKEN="..."
+
+Get the numeric IDs of the rooms you want the bot to join, comma delimited. If
+you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42` 
 and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
 
-    % heroku config:add HUBOT_CAMPFIRE_ROOMS="42,1024"
+    % export HUBOT_CAMPFIRE_ROOMS="42,1024"
 
 Add the subdomain hubot should connect to. If you web URL looks like
 `http://mysubdomain.campfirenow.com` then you'd add it like this:
 
-    % heroku config:add HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
+    % export HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
 
-Restart the bot
----------------
-You may want to get comfortable with `heroku logs` and `heroku restart`
-if you're having issues.
+[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
