@@ -63,15 +63,16 @@ module.exports = (robot) ->
       if cmds.length == 0
         msg.send "No available commands match #{filter}"
         return
+      prefix = robot.alias or robot.name
+      cmds = cmds.map (cmd) ->
+        cmd = cmd.replace /^hubot/, prefix
+        cmd.replace /hubot/ig, robot.name
 
-    prefix = robot.alias or robot.name
-    cmds = cmds.map (cmd) ->
-      cmd = cmd.replace /^hubot/, prefix
-      cmd.replace /hubot/ig, robot.name
+      emit = cmds.join "\n"
 
-    emit = cmds.join "\n"
-
-    msg.send emit
+      msg.send emit
+    else
+      msg.send "Full help can be viewed at " + process.env.HUBOT_HELP_URL + " -- I can't show you everything here because I am just too damn awesome for Flowdock to handle. But if you really want to see help here, try 'Megumi help <query>' to filter my output."
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = robot.helpCommands().map (cmd) ->
