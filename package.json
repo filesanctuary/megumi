@@ -43,7 +43,7 @@
     "nodepie": "0.5.0",
     "xml2js": "0.1.14",
     "pypi": "",
-    "validator" : "0.4.20",
+    "validator" : "13.1.1",
     "ntwitter": "0.2.10"
   },
 
